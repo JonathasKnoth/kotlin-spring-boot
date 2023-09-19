@@ -1,0 +1,1 @@
+alter table customer ADD COLUMN status varchar(255);

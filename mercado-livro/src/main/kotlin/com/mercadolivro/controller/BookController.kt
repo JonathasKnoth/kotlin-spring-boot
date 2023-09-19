@@ -28,7 +28,7 @@ class BookController (
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     fun create(@RequestBody resquest: PostBookRequest){
-        val customer = customerService.getById(resquest.customerId)
+        val customer = customerService.findById(resquest.customerId)
         bookService.create(resquest.toBookModel(customer))
     }
 
